@@ -5,7 +5,7 @@
   "scripts": {
     "prepare": "yarn run prepare:husky && yarn run prepare:types",
     "prepare:husky": "husky install",
-    "prepare:types": "npx typac ini -i ",
+    "prepare:types": "npx typesync",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
