@@ -36,3 +36,9 @@ typings/
 
 # Testing
 /coverage
+
+#TurboRepo
+.turbo
+build/**
+dist/**
+.next/**

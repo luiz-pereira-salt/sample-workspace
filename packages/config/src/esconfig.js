@@ -1,4 +1,4 @@
-import prettierOptions from './prettierrc';
+export * as prettierOptions from './prettierrc';
 
 export default {
   extends: ['next/core-web-vitals', 'prettier', 'plugin:jest-formatting/recommended'],

@@ -7,10 +7,10 @@ const publishTSConfig = { src: 'src/tsconfig.base.json', dest: 'dist' };
 
 export default [
   {
-    input: 'src/*.js',
+    input: 'src/esconfig.js',
     output: [
       {
-        file: 'dist/esconfig-bundle.js',
+        file: 'dist/index.js',
         format: 'esm',
       },
     ],
