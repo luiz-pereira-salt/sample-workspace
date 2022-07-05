@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AppButton } from '@dinasty/shared/dist/cjs';
 
 import axios from 'axios';
 
@@ -29,6 +30,7 @@ export default function Home({ book }) {
       <img src={book.imageUrl} alt={book.title} width="250" />
       <h1>{book.title}</h1>
       <p>{book.description}</p>
+      <AppButton label="teste"></AppButton>
       <button onClick={handleGetReviews}>Load reviews</button>
       {reviews && (
         <ul>

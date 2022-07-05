@@ -1,0 +1,4 @@
+GET Http://localhost:9001
+
+####
+GET Http://localhost:9001/portals

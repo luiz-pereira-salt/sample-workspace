@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Polyglot Microfrontends</title>
+    <meta name="importmap-type" content="systemjs-importmap" />
+    <script type="systemjs-importmap" src="http://localhost:9001"></script>
+    <% if (isDev) { %>
+        <script type="systemjs-importmap">
+          {
+            "imports": {
+              "@dinasty/root-app": "http://localhost:9002/root.js",
+              "@dinasty/colonies": "http://localhost:9003/colonies.js"
+            }
+          }
+        </script>
+        <% } %>
+        <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+  </head>
+  <body>
+    <script>
+      System.import('@dinasty/root-app');
+      System.import('@dinasty/colonies');
+    </script>
+    <h1>Single SPA Sample</h1>
+    <div class="root-content">
+      <div id="single-spa-application:@dinasty/navbar"></div>
+      <div id="single-spa-application:@dinasty/root-app"></div>
+      <div id="single-spa-application:@dinasty/colonies"></div>
+    </div>
+  </body>
+</html> 
